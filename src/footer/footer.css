@@ -1,0 +1,51 @@
+.footer {
+    background-color: #00d084;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 38px;
+  }
+  
+  .copyright {
+    color: #000;
+    font: 500 11px/24px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .contactInfo {
+    display: flex;
+    gap: 40px 100px;
+    flex-wrap: wrap;
+  }
+  
+  .phoneWrapper {
+    display: flex;
+    gap: 15px;
+    color: #000;
+    font: 500 11px/24px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    align-items: center;
+  }
+  
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 34px;
+  }
+  
+  @media (max-width: 991px) {
+    .footer {
+      max-width: 100%;
+      padding: 38px 20px;
+    }
+  
+    .contactInfo {
+      max-width: 100%;
+    }
+  }
