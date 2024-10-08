@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header/Header';
 import Hero from './services/Hero';
-import Services from './services/Services';
+import Services from './services/ServicesSection';
 import Footer from './footer/Footer';
 
 const ServicesPage = () => {

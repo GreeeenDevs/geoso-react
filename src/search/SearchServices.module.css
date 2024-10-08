@@ -1,43 +1,38 @@
-.hero {
+.container {
   background-color: #fff;
   display: flex;
   width: 100%;
   flex-direction: column;
-  font-family: Montserrat, sans-serif;
-  padding: 0 4px 8px;
-  max-width: 100vw;
-  box-sizing: border-box;
   overflow: hidden;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.22px;
 }
 
 @media (max-width: 991px) {
-  .hero {
+  .container {
     max-width: 100%;
   }
 }
 
-.heroContent {
+.heroSection {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 650px;
+  min-height: 960px;
+  width: 100%;
   align-items: start;
   justify-content: center;
-  padding: 170px 80px;
-
-  height: 0vh; /* Garante que o conteúdo ocupe a altura total da viewport */
-  justify-content: center; /* Centraliza verticalmente */
-  padding: 0; /* Remove o padding adicional que pode estar criando o espaço em branco */
+  padding: 219px 80px;
 }
 
 @media (max-width: 991px) {
-  .heroContent {
+  .heroSection {
     max-width: 100%;
     padding: 100px 20px;
   }
 }
 
-.heroImage {
+.backgroundImage {
   position: absolute;
   inset: 0;
   height: auto;
@@ -46,60 +41,66 @@
   object-position: center;
 }
 
-.textContainer {
+.searchBox {
   position: relative;
+  background-color: #fff;
   display: flex;
-  margin-bottom: -52px;
-  width: 648px;
+  margin-bottom: -44px;
+  width: 622px;
   max-width: 100%;
   flex-direction: column;
-  padding: 150px 30px 250px 30px;
-  background-color: #ffffffab;
+  padding: 76px 64px 129px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 991px) {
-  .textContainer {
+  .searchBox {
     margin-bottom: 10px;
+    padding: 0 20px 100px;
   }
 }
 
-.heroTitle {
+.title {
   color: #000;
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 80px;
-  letter-spacing: -0.84px;
-  z-index: 10;
-  margin-top: -18px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  align-self: start;
+}
+
+.inputField {
+  background-color: #fff;
+  margin-top: 71px;
+  line-height: 1.6;
+  padding: 9px 14px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 991px) {
-  .heroTitle {
+  .inputField {
     max-width: 100%;
-    font-size: 40px;
-    line-height: 64px;
+    padding-right: 20px;
+    margin-top: 40px;
   }
 }
 
-.ctaButton {
+.searchButton {
   border-radius: 6px;
   background-color: #00d084;
   align-self: start;
-  margin-top: 68px;
-  font-size: 17px;
   color: #fff;
   font-weight: 500;
+  white-space: nowrap;
   text-align: center;
-  letter-spacing: -0.26px;
-  padding: 16px 48px;
-  border: none;
-  cursor: pointer;
+  margin: 52px 0 -26px;
+  padding: 15px 29px;
 }
 
 @media (max-width: 991px) {
-  .ctaButton {
-    margin-top: 40px;
-    padding: 16px 20px;
+  .searchButton {
+    white-space: initial;
+    margin: 40px 0 10px;
+    padding: 0 20px;
   }
 }
 

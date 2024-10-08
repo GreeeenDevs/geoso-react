@@ -1,7 +1,8 @@
 import React from 'react';
-import FAQItem from './FAQItem';
+import AccordionItem from './FAQItem';
+import styles from './FAQList.module.css';
 
-function FAQList() {
+const FAQList = () => {
   const questions = [
     "Pergunta ?",
     "Pergunta ?",
@@ -10,14 +11,14 @@ function FAQList() {
   ];
 
   return (
-    <section className="flex overflow-hidden gap-2.5 items-start px-2.5 py-24 leading-snug bg-white font-[number:var(--sds-typography-body-font-weight-strong)] min-h-[476px] text-[color:var(--sds-color-text-default-default)] text-[length:var(--sds-typography-body-size-medium)]">
-      <div className="flex flex-col pr-9 pb-6 min-w-[240px] w-[1496px]">
+    <section className={styles.services}>
+      <div className={styles.accordion}>
         {questions.map((question, index) => (
-          <FAQItem key={index} question={question} />
+          <AccordionItem key={index} title={question} />
         ))}
       </div>
     </section>
   );
-}
+};
 
 export default FAQList;

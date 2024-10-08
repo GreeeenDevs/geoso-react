@@ -2,10 +2,10 @@ import React from 'react';
 import Header from './header/Header';
 import Hero from './home/Hero';
 import ServiceSection from './home/ServiceSection';
-import SearchSection from './home/SearchServices';
+import SearchSection from './home/SearchSection';
 import Footer from './footer/Footer';
 
-function LandingPage() {
+function HomePage() {
   return (
     <div className="flex flex-col">
       <Header />
@@ -19,4 +19,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default HomePage;
