@@ -1,16 +1,28 @@
 import React from 'react';
-import Logo from './Logo.jsx';
-import Navigation from './Navigation.jsx';
-import Button from './Button.jsx';
+import styles from './Header.module.css';
+import NavLink from './NavLink';
+import Button from './Button';
+
+const navItems = [
+  { text: 'PAGINA INICIAL', href: '/' },
+  { text: 'SERVIÇOS PRESTADOS', href: '/servicos' },
+  { text: 'PESQUISA DE SERVIÇOS', href: '/pesquisa' },
+  { text: 'PERGUNTAS FREQUENTES', href: '/faq' },
+  { text: 'SOBRE NÓS', href: '/sobre' },
+];
 
 function Header() {
   return (
-    <header className="flex gap-5 justify-between items-center py-4 pr-20 pl-9 max-w-full bg-white w-[1680px] max-md:px-5 max-md:mr-1">
-      <Logo />
-      <Navigation />
-      <div className="flex gap-7 self-stretch my-auto text-sm font-medium tracking-tight text-center">
-        <Button variant="outline" color="emerald">Área do Cliente</Button>
-        <Button variant="solid" color="emerald">Entre em contato</Button>
+    <header className={styles.header}>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3eecfa1c5dc045aadbcef86e204348aed40a807884549cf8a6dc37da3eabd559?placeholderIfAbsent=true&apiKey=d7514896dbad40828bdeb0585d8c7a9d" className={styles.logo} alt="Company logo" />
+      <nav className={styles.navLinks}>
+        {navItems.map((item) => (
+          <NavLink key={item.href} {...item} />
+        ))}
+      </nav>
+      <div className={styles.buttonGroup}>
+        <Button variant="outlined" text="Área do Cliente" />
+        <Button variant="filled" text="Entre em contato" />
       </div>
     </header>
   );
