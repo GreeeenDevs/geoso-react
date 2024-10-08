@@ -90,3 +90,21 @@
   border-radius: 6px;
   background-color: #00d084;
 }
+
+.navLink {
+  color: black; /* Cor preta por padrão */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transição suave entre as cores */
+}
+
+.navLink:hover {
+  color: #00da62; /* Tom de turquesa ao passar o mouse */
+}
+
+.navLink:active {
+  color: #89ffbe; /* Tom de turquesa mais claro ao clicar */
+}
+
+.activeLink {
+  color: #89ffbe; /* Mantém a cor turquesa da sua classe ativa */
+}
