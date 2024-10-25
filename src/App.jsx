@@ -7,7 +7,8 @@ import Services from './ServicesPage';
 import SearchServices from './SearchPage';
 import FAQ from './QuestionsPage';
 import About from './AboutPage';
-
+import { RegistrationForm } from'./RegistroPage';
+import { LoginForm } from './LoginPage';
 function App() {
   return (
     <Router>
@@ -18,6 +19,8 @@ function App() {
         <Route path="/pesquisa" element={<SearchServices />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/login" element={<LoginForm />}/>
+        <Route path="/registro" element={<RegistrationForm/>}/>
       </Routes>
       <Footer />
     </Router>
